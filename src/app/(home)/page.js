@@ -98,7 +98,7 @@ const HomePage = () => {
                 <br />
                 <span className="text-yellow-700">mortgage brokers.</span>
               </h1>
-              <p className="text-lg mb-8 mt-5">
+              <p className="text-lg mb-8 mt-5 text-gray-700">
                 At SIMPLI Mortgages, we find approvals where others can't. Trust
                 us to help you with your home loan.
               </p>
