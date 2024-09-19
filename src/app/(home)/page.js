@@ -84,11 +84,18 @@ const HomePage = () => {
         </header>
 
         {/* Hero Section */}
-        <section className="bg-gray-100 py-16 md:py-24">
-          <div className="container mx-auto px-4 md:flex items-center">
-            <div className="md:w-1/2 md:pr-12">
+        <section className="bg-gray-100 py-8 md:py-24">
+          <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div className="w-full md:w-1/2 md:order-2 mb-8 md:mb-0">
+              <img
+                src="/family2.jpg"
+                alt="Happy family"
+                className="rounded-lg shadow-xl w-full"
+              />
+            </div>
+            <div className="w-full md:w-1/2 md:pr-12 md:order-1">
               <h1
-                className="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold"
+                className="text-gray-800 text-2xl md:text-4xl lg:text-5xl font-bold mb-8"
                 style={{ lineHeight: "1.1" }}
               >
                 No mortgage is too tough for
@@ -98,11 +105,11 @@ const HomePage = () => {
                 <br />
                 <span className="text-yellow-700">mortgage brokers.</span>
               </h1>
-              <p className="text-lg mb-8 mt-5 text-gray-700">
+              <p className="text-lg mb-8 text-gray-700 hidden md:block">
                 At SIMPLI Mortgages, we find approvals where others can't. Trust
                 us to help you with your home loan.
               </p>
-              <div className="space-x-4">
+              <div className="flex flex-wrap gap-4 mb-8">
                 <button className="bg-black text-white px-6 py-3 rounded-full font-semibold">
                   I want to buy
                 </button>
@@ -110,7 +117,7 @@ const HomePage = () => {
                   I want to refinance
                 </button>
               </div>
-              <div className="mt-6 flex items-center">
+              <div className="flex items-center">
                 <img
                   src="https://www.homeloanexperts.com.au/wp-content/uploads/2024/02/product_review_logo_1x.webp"
                   alt="Product Review"
@@ -129,13 +136,6 @@ const HomePage = () => {
                 </div>
                 <span className="ml-2 text-gray-600">4.8 (1,650+ Reviews)</span>
               </div>
-            </div>
-            <div className="md:w-1/2 mt-8 md:mt-0">
-              <img
-                src="/family2.jpg"
-                alt="Happy family"
-                className="rounded-lg shadow-xl w-full"
-              />
             </div>
           </div>
         </section>
