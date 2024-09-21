@@ -320,15 +320,12 @@ const HomePage = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
               <div>
-                <div className="flex flex-col items-center">
-                  {" "}
-                  <div className="mb-4">
-                    <img
-                      src="/logg.png"
-                      alt="SIMPLI Mortgages Logo"
-                      style={{ height: "7rem" }} // Custom height (adjust as needed)
-                    />
-                  </div>
+                <div className="flex justify-center mb-4 md:justify-start">
+                  <img
+                    src="/logg.png"
+                    alt="SIMPLI Mortgages Logo"
+                    style={{ height: "7rem" }} // Custom height (adjust as needed)
+                  />
                 </div>
                 <h3 className="font-bold mb-2">ABOUT US</h3>
                 <p className="text-sm">
