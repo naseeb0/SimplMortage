@@ -42,10 +42,11 @@ const HomePage = () => {
         <header className="bg-black text-white shadow-md">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <div className="flex items-center">
-              <span className="text-2xl font-bold">SIMPLI</span>
-              <span className="text-yellow-400 text-2xl font-bold">
-                Mortgages
-              </span>
+              <img
+                src="/logg.png"
+                alt="SIMPLI Mortgages Logo"
+                style={{ height: "3rem" }} // Custom height (adjust as needed)
+              />
             </div>
             <nav className="hidden md:flex space-x-6">
               <a href="#" className="text-white hover:text-yellow-400">
@@ -320,10 +321,11 @@ const HomePage = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
               <div>
                 <div className="flex items-center mb-4">
-                  <span className="text-2xl font-bold">SIMPLI</span>
-                  <span className="text-yellow-400 text-2xl font-bold">
-                    Mortgages
-                  </span>
+                  <img
+                    src="/logg.png"
+                    alt="SIMPLI Mortgages Logo"
+                    style={{ height: "7rem" }} // Custom height (adjust as needed)
+                  />
                 </div>
                 <h3 className="font-bold mb-2">ABOUT US</h3>
                 <p className="text-sm">
@@ -412,22 +414,22 @@ const HomePage = () => {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
                 <div>
                   <p className="text-sm">
-                    <strong>Local:</strong> 1300 889 743
+                    <strong>Local:</strong> 289 497 8989
                   </p>
                 </div>
                 <div>
                   <p className="text-sm">
-                    <strong>Overseas:</strong> +61 2 9194 1700
+                    <strong>Overseas:</strong> 289 497 8989
                   </p>
                 </div>
                 <div>
                   <p className="text-sm">
-                    <strong>Fax:</strong> +61 2 9475 4466
+                    <strong>Fax:</strong> 289 497 8989
                   </p>
                 </div>
                 <div>
                   <p className="text-sm">
-                    <strong>Email:</strong> info@simplimortgages.com.au
+                    <strong>Email:</strong> info@simplimortgages.ca
                   </p>
                 </div>
               </div>
