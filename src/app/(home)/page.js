@@ -200,7 +200,7 @@ const HomePage = () => {
                 className="hidden md:flex items-center text-yellow-400"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                +61 2 9194 1700
+                +1 289 497 8989
               </a>
               <button className="hidden md:block bg-yellow-400 text-black px-4 py-2 rounded-full">
                 GET A FREE ASSESSMENT
