@@ -342,7 +342,7 @@ const HomePage = () => {
 
         <section className="py-16 px-4 max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16">
-            <span className="text-gray-800">Home Loan Experts Is</span>{" "}
+            <span className="text-gray-800">Simpli Mortages Is</span>{" "}
             <span className="text-yellow-700">Here To Help</span>
           </h2>
           <AnimatedSteps />
