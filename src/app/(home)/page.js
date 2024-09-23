@@ -346,7 +346,7 @@ const HomePage = () => {
             <span className="text-yellow-700">Here To Help</span>
           </h2>
           <AnimatedSteps />
-          {/* <div className="text-center mt-16">
+          {/* <div clsassName="text-center mt-16">
             <button className="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition duration-300">
               Experience it firsthand
             </button>
