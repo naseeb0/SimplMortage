@@ -18,12 +18,11 @@ const LenderShowcase = () => {
 
   return (
     <div className="bg-gray-100 w-full">
-      <div className="max-w-5xl mx-auto px-4 py-8">
-        <h2 className="text-3xl font-bold text-center mb-4 text-gray-800">
-          We Have 50+ <span className="text-yellow-700">Lenders</span> You Can
-          Trust
+      <div className="max-w-5xl mx-auto px-4 py-16">
+        <h2 className="text-4xl font-bold text-center mb-4 text-gray-800">
+          50+ <span className="text-yellow-700">Lenders</span> to Serve you
         </h2>
-        <p className="text-center text-gray-800 mb-8">
+        <p className="text-center text-gray-800 mb-20">
           At Simpli mortages, we will compare thousands of mortgages to find the
           right one for you.
         </p>
@@ -42,7 +41,7 @@ const LenderShowcase = () => {
           ))}
         </div>
         <div className="text-center">
-          <button className="bg-gray-950 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-full">
+          <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-6 rounded-full">
             Explore more lenders
           </button>
         </div>

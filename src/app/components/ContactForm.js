@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <div className=" min-h-screen flex items-center justify-center p-4 sm:p-8">
+    <div className="min-h-screen flex items-center justify-center p-4 sm:p-8 py-16 sm:py-24">
       <div className="bg-white shadow-xl rounded-lg overflow-hidden max-w-5xl w-full">
         <div className="p-8 sm:p-12 flex flex-col lg:flex-row gap-12">
           <div className="lg:w-1/2 space-y-8">
@@ -17,25 +17,14 @@ const ContactForm = () => {
             </div>
 
             <form className="space-y-6">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex-1">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  />
-                </div>
-                <div className="flex-1">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  />
-                </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -54,31 +43,6 @@ const ContactForm = () => {
                   type="tel"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-800 mb-2">
-                  Are you a Realtor?
-                </label>
-                <div className="flex gap-4">
-                  <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      className="form-radio text-yellow-400"
-                      name="realtor"
-                      value="yes"
-                    />
-                    <span className="ml-2">Yes</span>
-                  </label>
-                  <label className="inline-flex items-center">
-                    <input
-                      type="radio"
-                      className="form-radio text-yellow-400"
-                      name="realtor"
-                      value="no"
-                    />
-                    <span className="ml-2">No</span>
-                  </label>
-                </div>
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">

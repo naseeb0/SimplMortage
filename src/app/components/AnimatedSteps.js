@@ -8,26 +8,30 @@ const steps = [
   {
     number: 1,
     Icon: Lock,
-    title: "Understanding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Qualification",
+    description:
+      "We consider your financial situation and ask the right questions to understand your needs.",
   },
   {
     number: 2,
     Icon: BarChart2,
-    title: "Finding deals",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Gathering Documents",
+    description:
+      "Collect all necessary financial documents to ensure a smooth mortgage process.",
   },
   {
     number: 3,
     Icon: Search,
-    title: "Closing",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Finding Best Rates",
+    description:
+      "We search for the best mortgage rates to match your financial goals.",
   },
   {
     number: 4,
     Icon: Smile,
-    title: "Ongoing support",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Getting Approved",
+    description:
+      "We guide you through the approval process for a stress-free experience.",
   },
 ];
 const Step = ({ step }) => {
@@ -59,18 +63,24 @@ const Step = ({ step }) => {
 };
 const AnimatedSteps = () => {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="flex flex-col sm:flex-row justify-center items-center">
-        {steps.map((step) => (
-          <div
-            className="flex flex-col items-start mb-8 sm:w-1/4 sm:mb-0"
-            key={step.number}
-          >
-            <Step step={step} />
-          </div>
-        ))}
+    <section className="py-20 px-4 max-w-6xl mx-auto">
+      <h2 className="text-4xl font-bold text-center mb-16">
+        <span className="text-gray-800">Simpli Mortages Is</span>{" "}
+        <span className="text-yellow-700">Here To Help</span>
+      </h2>
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col sm:flex-row justify-center items-center">
+          {steps.map((step) => (
+            <div
+              className="flex flex-col items-start mb-8 sm:w-1/4 sm:mb-0"
+              key={step.number}
+            >
+              <Step step={step} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

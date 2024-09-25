@@ -10,9 +10,13 @@ import {
   Search,
   Phone,
 } from "lucide-react";
+import MortgageCalculator from "@/app/components/MortageCalculator";
+import UnderstandingNeedsSection from "@/app/components/UnderstandNeeds";
+import CEOWords from "@/app/components/CEOWords";
 import { Lock, BarChart2, Smile } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
 import AnimatedSteps from "@/app/components/AnimatedSteps";
+import MortgageRateComparison from "@/app/components/MortageRateCalc";
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -36,29 +40,31 @@ const HomePage = () => {
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-semibold mb-3 text-gray-800">{title}</h3>
         <p className="mb-4 text-gray-600 flex-grow">{description}</p>
-        <button className="bg-yellow-400 text-gray-800 px-6 py-2 rounded-full mt-auto self-start font-semibold transition-colors duration-300 hover:bg-yellow-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">
-          Calculate Now
-        </button>
+        <div className="flex justify-center">
+          <button className="bg-yellow-400 text-gray-800 px-6 py-2 rounded-full mt-auto font-semibold transition-colors duration-300 hover:bg-yellow-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">
+            Calculate Now
+          </button>
+        </div>
       </div>
     </div>
   );
   const calculators = [
     {
-      title: "LMI Calculator",
+      title: "Mortgage Insurance Calculator",
       description:
-        "Use our Lenders Mortgage Insurance (LMI) calculator to find out how much you might need to pay if you're borrowing more than 80% of the property value.",
+        "Calculate the cost of Lenders Mortgage Insurance (LMI) if your loan exceeds 80% of the property value. Determine how much LMI you need to budget for.",
       image: "/onee.jpg",
     },
     {
       title: "Mortgage Repayment Calculator",
       description:
-        "You can use this calculator to work out your repayments with different loan sizes, interest rates, loan terms and repayment options.",
+        "Estimate your monthly repayments based on your loan amount, interest rate, loan term, and repayment schedule. Customize different scenarios to find a plan that suits you.",
       image: "/two.jpg",
     },
     {
-      title: "LVR Calculator",
+      title: "Loan to Value Calculator",
       description:
-        "The percentage of the total property value you are borrowing is your Loan-To-Value Ratio (LVR). Calculate the percentage of LVR your loan situation allows.",
+        "Easily calculate your Loan-to-Value Ratio (LVR) to see how much of the property value you’re borrowing. Use this tool to better understand your borrowing power.",
       image: "/three.jpg",
     },
   ];
@@ -152,7 +158,7 @@ const HomePage = () => {
         {/* Top Banner */}
         <div className="bg-yellow-400 text-black p-2 text-center">
           <p className="text-sm">
-            Interest rates from 5.99% p.a. (6.01% comp. rate)*.
+            Fixed Interest rates from 4% * . Call us or enquire online.
             <a href="#" className="underline ml-2">
               Call us
             </a>{" "}
@@ -163,7 +169,6 @@ const HomePage = () => {
             .
           </p>
         </div>
-
         {/* Header */}
         <header className="bg-black text-white shadow-md">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -200,7 +205,7 @@ const HomePage = () => {
                 className="hidden md:flex items-center text-yellow-400"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                +1 289 497 8989
+                <strong>+1 289 497 8989</strong>
               </a>
               <button className="hidden md:block bg-yellow-400 text-black px-4 py-2 rounded-full">
                 GET A FREE ASSESSMENT
@@ -209,9 +214,8 @@ const HomePage = () => {
             </div>
           </div>
         </header>
-
         {/* Hero Section */}
-        <section className="bg-gray-100 py-8 md:py-24">
+        <section className="bg-gray-50 py-8 md:py-24">
           <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between max-w-screen-xl">
             <div className="w-full md:w-1/2 md:order-2 mb-8 md:mb-0">
               <img
@@ -243,7 +247,7 @@ const HomePage = () => {
                 <button className="bg-gray-800 text-white px-6 py-3 rounded-full font-semibold text-lg w-full md:w-auto">
                   I am looking for Mortgage Loan
                 </button>
-                <button className="bg-yellow-700 text-white px-6 py-3 rounded-full font-semibold text-lg w-full md:w-auto">
+                <button className="bg-yellow-400 text-gray-850 px-6 py-3 rounded-full font-semibold text-lg w-full md:w-auto">
                   I want to refinance
                 </button>
               </div>
@@ -271,10 +275,9 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-
         {/* Mortgage Options */}
-        <section className="max-w-5xl mx-auto px-4 py-12">
-          <h2 className="text-3xl font-bold text-center mb-2 text-gray-800">
+        <section className="max-w-5xl mx-auto px-4 py-24">
+          <h2 className="text-4xl font-bold text-center mb-2 text-gray-800">
             Explore The{" "}
             <span className="text-yellow-800">Right Mortgage For You</span>
           </h2>
@@ -282,24 +285,24 @@ const HomePage = () => {
             Your dream home deserves a mortgage that resonates with your goals.
             Let's find it together.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
             <MortgageOption
               Icon={HomeIcon}
-              title="Waived LMI Home Loans"
+              title="Fixed Rate Mortgages"
               features={[
-                "No need to pay Lenders Mortgage Insurance",
-                "Lower upfront costs",
-                "Accessible with smaller deposits",
+                "Predictable Monthly Payments",
+                "Long-Term Stability",
+                "Ideal for Conservative Borrowers",
               ]}
               buttonText="Find out more"
             />
             <MortgageOption
               Icon={FileTextIcon}
-              title="Low-Doc Home Loans"
+              title="Variable Rate Mortgages"
               features={[
-                "Great for self-employed borrowers",
-                "Offer flexibility in proving your income",
-                "Extensive documents not required",
+                "Potential for Lower Rates",
+                "Flexibility to Switch or Refinance",
+                "Suitable for Risk-Tolerant Borrowers",
               ]}
               buttonText="Find out more"
             />
@@ -307,55 +310,49 @@ const HomePage = () => {
               Icon={BankIcon}
               title="Low-Deposit Home Loans"
               features={[
-                "A quicker path to home ownership",
-                "Great option for first-home buyers",
-                "Minimum of 5% deposit required",
+                "Easier Entry to Property Market",
+                "Government Assistance Options",
+                "Higher Interest Rates",
               ]}
               buttonText="Find out more"
             />
           </div>
         </section>
-
-        {/* Calculators Section */}
         <section className="bg-gray-100 py-16 px-4">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-gray-800 pt-6">
               Master Your{" "}
               <span className="text-yellow-700">Financial Journey</span>
             </h2>
-            <h3 className="text-xl md:text-2xl text-center mb-12 text-gray-700">
-              Using Our Home Loan Calculators
-            </h3>
+            <p className="text-center text-gray-600 mb-8 pb-10">
+              Using our Home Loan Calculator
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {calculators.map((calc, index) => (
                 <CalculatorCard key={index} {...calc} />
               ))}
             </div>
             <div className="text-center">
-              <button className="bg-gray-800 text-white px-8 py-3 rounded-full font-semibold text-lg transition-colors duration-300 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50">
+              <button className="bg-yellow-400 text-gray-700 px-8 py-3 rounded-full font-semibold text-lg transition-colors duration-300 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50">
                 Explore more calculators
               </button>
             </div>
           </div>
         </section>
+        <MortgageRateComparison />
+
+        <AnimatedSteps />
+        {/* Calculators Section */}
+
         {/*PROCESS SECTIOn */}
 
-        <section className="py-16 px-4 max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">
-            <span className="text-gray-800">Simpli Mortages Is</span>{" "}
-            <span className="text-yellow-700">Here To Help</span>
-          </h2>
-          <AnimatedSteps />
-          {/* <div clsassName="text-center mt-16">
-            <button className="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition duration-300">
-              Experience it firsthand
-            </button>
-          </div> */}
-        </section>
+        <MortgageCalculator />
+        <CEOWords />
         <LenderShowcase />
         <ContactForm />
+        {/* <UnderstandingNeedsSection /> */}
         {/* Footer */}
-        <footer className="bg-black text-white py-8">
+        <footer className="bg-black text-white py-8 mt-2">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
               <div>
@@ -368,9 +365,10 @@ const HomePage = () => {
                 </div>
                 <h3 className="font-bold mb-2">ABOUT US</h3>
                 <p className="text-sm">
-                  Simpli Mortages serves the communities of Ontario and Alberta
-                  by educating individuals and families to make informed real
-                  estate decisions.
+                  Simpli Mortages is a leading Liscenced Mortgage Brokerage that
+                  serves the communities of Ontario and Alberta by educating
+                  individuals and families to make informed real estate
+                  decisions.
                   <br />
                   ABN:
                   <br />
@@ -392,14 +390,13 @@ const HomePage = () => {
               <div>
                 <h3 className="font-bold mb-2">SPECIALITIES</h3>
                 <ul className="text-sm space-y-1 text-gray-300">
-                  <li>No Deposit Home Loans</li>
-                  <li>Guarantor Loans</li>
-                  <li>Non-Resident Loans</li>
-                  <li>Unusual Employment</li>
-                  <li>Low Doc Loans</li>
-                  <li>Waived LMI</li>
-                  <li>Bad Credit Home Loans</li>
-                  <li>Australian Expat Home Loan</li>
+                  <li>Fixed & Variable Rate Mortgages</li>
+                  <li>3 Years Fixed Rate Mortgage</li>
+                  <li>5 Years Fixed Rate Mortgage</li>
+                  <li>1 Year Variable Rate Mortgage</li>
+                  <li>1 Year Variable Rate Mortgage</li>
+                  <li>Private Mortgages</li>
+                  <li>Last Minute Bridge Loans</li>
                 </ul>
               </div>
               <div>
@@ -438,7 +435,9 @@ const HomePage = () => {
                   <h4 className="font-bold text-yellow-400 mb-2">
                     Mailing Address
                   </h4>
-                  <p className="text-sm">PO Box 3726 Rhodes NSW 2138</p>
+                  <p className="text-sm">
+                    Unit A, 3610 Mavis Rd, Mississauga L5C 1W2
+                  </p>
                 </div>
                 <div>
                   <h4 className="font-bold text-yellow-400 mb-2">Email</h4>
@@ -469,11 +468,9 @@ const HomePage = () => {
 
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-sm mb-4 md:mb-0">
-                © 2024 SIMPLI Mortgages Pty Ltd | Credit Representative 540270
-                is authorized
+                © 2024 SIMPLI Mortgages. All rights reserved. Licensed under the
+                Province of Ontario, Canada.
                 <br />
-                under Australian Credit License Number 385328 | ABN: 80 648 606
-                464
               </p>
               <div className="flex space-x-4">
                 <FaFacebookF className="text-xl hover:text-yellow-400 cursor-pointer" />
