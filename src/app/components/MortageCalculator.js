@@ -86,7 +86,7 @@ const MortgageCalculator = () => {
                 <input
                   type="text"
                   {...register("homeValue")}
-                  className="block w-full h-12 border border-gray-300 rounded-lg pl-8 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-500 text-base"
+                  className="block w-full h-12 border text-gray-950 border-gray-300 rounded-lg pl-8 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-500 text-base"
                 />
               </div>
             </div>
@@ -117,7 +117,7 @@ const MortgageCalculator = () => {
                   <input
                     type="text"
                     {...register("downPaymentPercent")}
-                    className="block w-full h-12 border border-gray-300 rounded-lg pl-8 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-500 text-base"
+                    className="block w-full h-12 text-gray-950 border border-gray-300 rounded-lg pl-8 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-500 text-base"
                   />
                 </div>
               </div>
@@ -148,7 +148,7 @@ const MortgageCalculator = () => {
                 <input
                   type="text"
                   {...register("interestRate")}
-                  className="block w-full h-12 border border-gray-300 rounded-lg pl-8 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-500 text-base"
+                  className="block w-full h-12 text-gray-950 border border-gray-300 rounded-lg pl-8 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-500 text-base"
                 />
               </div>
             </div>
@@ -161,7 +161,7 @@ const MortgageCalculator = () => {
                 <input
                   type="text"
                   {...register("mortgageTerm")}
-                  className="block w-full h-12 border border-gray-300 rounded-lg pl-8 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-500 text-base"
+                  className="block w-full h-12 border text-gray-950 border-gray-300 rounded-lg pl-8 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-500 text-base"
                 />
               </div>
             </div>

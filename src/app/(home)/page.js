@@ -247,7 +247,7 @@ const HomePage = () => {
                 <button className="bg-gray-800 text-white px-6 py-3 rounded-full font-semibold text-lg w-full md:w-auto">
                   I am looking for Mortgage Loan
                 </button>
-                <button className="bg-yellow-400 text-gray-850 px-6 py-3 rounded-full font-semibold text-lg w-full md:w-auto">
+                <button className="bg-yellow-400 text-gray-950 px-6 py-3 rounded-full font-semibold text-lg w-full md:w-auto">
                   I want to refinance
                 </button>
               </div>
