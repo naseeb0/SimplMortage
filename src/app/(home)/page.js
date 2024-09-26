@@ -215,7 +215,7 @@ const HomePage = () => {
           </div>
         </header>
         {/* Hero Section */}
-        <section className="bg-gray-50 py-8 md:py-24">
+        <section className="bg-gray-50 py-8 md:py-24 relative">
           <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between max-w-screen-xl">
             <div className="w-full md:w-1/2 md:order-2 mb-8 md:mb-0">
               <img
@@ -243,7 +243,7 @@ const HomePage = () => {
                 At SIMPLI Mortgages, we find approvals where others can't. Trust
                 us to help you with your home loan.
               </p>
-              <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start mb-6">
+              <div className="hidden md:flex flex-col md:flex-row gap-4 justify-center md:justify-start mb-6">
                 <button className="bg-gray-800 text-white px-6 py-3 rounded-full font-semibold text-lg w-full md:w-auto">
                   I am looking for Mortgage Loan
                 </button>
@@ -273,6 +273,16 @@ const HomePage = () => {
                 </span>
               </div>
             </div>
+          </div>
+
+          {/* Floating buttons for mobile */}
+          <div className="md:hidden fixed bottom-0 left-0 right-0 flex flex-col gap-2 p-4 z-50">
+            <button className="bg-gray-800 text-white px-6 py-3 rounded-full font-semibold text-lg w-full shadow-lg">
+              I am looking for Mortgage Loan
+            </button>
+            <button className="bg-yellow-400 text-gray-950 px-6 py-3 rounded-full font-semibold text-lg w-full shadow-lg">
+              I want to refinance
+            </button>
           </div>
         </section>
         {/* Mortgage Options */}
